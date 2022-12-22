@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+
+import 'scss/app.scss'
+import Goods from 'components/Goods'
+import Search from 'components/Search';
+
+// 设置移动端的适配
+document.querySelector('html').style.fontSize = 100 / 750 + 'vw'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search></Search>
+      <Goods></Goods>
     </div>
   );
 }
